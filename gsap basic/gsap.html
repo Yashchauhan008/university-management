@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #page1 {
+        height: 100vh;
+        width: 100vw;
+        background-color: #25c2c2;
+      }
+
+      /* --------------------------------- */
+      #box {
+        height: 300px;
+        width: 300px;
+        background-color: rgb(216, 18, 130);
+      }
+
+      /* --------------------- */
+      h1 {
+        color: #25c2c2;
+        font-size: 50px;
+      }
+      h2 {
+        color: #8b25c2;
+        font-size: 40px;
+      }
+      h3 {
+        color: #a3c225;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -----------------------part 1---------------------------------------- -->
+    <!-- <div id="page1">
+        <div id="box">
+
+        </div>
+    </div> -->
+
+    <!-- ---------------------------------------------- -->
+
+    <!-- <h1>my name is h1</h1>
+    <h2>my name is h2</h2>
+    <h3>my name is h3</h3> -->
+
+    <!-- <h4>taru kaam kar ne bhai</h4>
+    <h4>taru kaam kar ne bhai</h4>
+    <h4>taru kaam kar ne bhai</h4> -->
+
+    <!-- <h5>ela eka var ma na samjay tane</h5> -->
+
+    <!-- -----------------------------part 2------------------------------- -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./god/gsap.js"></script>
+    <script>
+      // //animate from base to final
+      // gsap.to('#box',{
+      //         x:900,
+      //         y:400,
+      //         duration:2,
+      //         delay:1,
+      //         backgroundColor:'blue',
+      //         rotate:360,
+      //         scale:.5
+      // })
+
+      //animate from final to base
+
+      // gsap.from('#box',{
+      //     x:900,
+      //     y:400,
+      //     duration:2,
+      //     delay:1,
+      //     backgroundColor:'blue',
+      //     rotate:360,
+      //     scale:.5
+      // })
+
+      // -------------------------------------
+      // gsap.to('h1',{
+      //     x:200,
+      //     color:"blue",
+      //     duration:3,
+      //     delay:1
+      // })
+
+      // gsap.to('h2',{
+      //     x:200,
+      //     color:"salmon",
+      //     duration:3,
+      //     delay:2
+      // })
+      // gsap.to('h3',{
+      //     x:200,
+      //     color:"black",
+      //     duration:3,
+      //     delay:3
+      // })
+
+      // ----------this is use for multiple same tag -----
+      // gsap.to('h4',{
+      //     x:200,
+      //     color:"green",
+      //     duration:3,
+      //     delay:4,
+      //     stagger:1 //one second diff
+      // })
+
+      // gsap.to('h5',{
+      //     x:200,
+      //     color:"red",
+      //     duration:3,
+      //     delay:5,
+      //     repeat:-1, //1 for 2 time,10 for 11 time
+      //     yoyo:true//base to final final to base
+      // })
+
+      // ---------------------time line-----------------------\
+
+      // --------------------when first transition ends then another will satart-------------------
+      // var tl = gsap.timeline()
+
+      // tl.to('h1,h2,h3',{
+      //     x:200,
+      //     color:"blue",
+      //     duration:3,
+      // })
+      // tl.to('h2',{
+      //     x:400,
+      //     color:"yellow",
+      //     duration:3,
+      // })
+      // tl.to('h3',{
+      //     x:600,
+      //     color:"black",
+      //     duration:3,
+      // })
+    </script>
+  </body>
+</html>

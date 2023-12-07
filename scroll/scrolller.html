@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'gilory';
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(97, 225, 65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(225, 65, 220);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color:crimson;
+}
+    </style>
+</head>
+<body>
+    <div id="page1">
+        <div id="box"></div>
+    </div>
+    <div id="page2">
+        <div id="box"></div>
+    </div>
+    <div id="page3">
+        <div id="box"></div>
+    </div>
+
+    
+
+
+
+    <script src="./god/gsap.js"></script>
+    <script src="./god/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.from('#page1 #box',{
+    scale:0,
+    delay:1,
+    duration:1,
+    rotate:360,
+})
+
+gsap.from('#page2 #box',{
+    scale:0,
+    delay:1,
+    duration:1,
+    rotate:360,
+    // scrollTrigger:"#page2 #box"
+    scrollTrigger:{
+        trigger:'#page2 #box',
+        scroll:"body",
+    }
+})
+
+gsap.from('#page3 #box',{
+    scale:0,
+    delay:1,
+    duration:1,
+    rotate:360,
+    scrollTrigger:{
+        trigger:'#page3 #box',
+        scroll:"body",
+        markers:true,
+        start:'top 90%',//animation start when start = scrollstart in markers
+        end:'top 30%',//animation end when start = scrollend in markers
+        scrub:5 //limit is true or 1 to 5 this represent smoothness
+    }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!-- -------------5----------------. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docum ent</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    /* background-color: tan; */
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    padding: 0 50px;
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid #dadada;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+#nav h1{
+    color: white;
+}
+#nav2{  
+    display: flex;
+    align-items:center;
+    gap: 50px;
+}
+#nav h3{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#container{
+    height: 60%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    margin: 30px;
+}
+#left{
+    height: 100%;
+    width: 50%;
+    /* background-color:#451616; */
+    padding : 50px;
+    font-size :45px;
+    text-transform: uppercase;
+}
+#left h1 span img{
+    height: 80px;
+    width: 80px;
+    border-radius:50% ;
+    object-fit: cover;
+    margin-left:-40px ;
+    border: 2px solid black;
+}
+#left h1:nth-child(3){
+    margin-left: 30px;
+}
+#right{
+    height: 100%;
+    width: 50%;
+    /* background-color:#cc2a2a; */
+}
+#right img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box{
+    height: 250px;
+    width: 400px;
+    background-color: #000;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.box h1{
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.box p{
+    font-size: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="page1">
+        <div id="nav">
+            <h1>coucher</h1>
+            <div id="nav2">
+                <h3>service</h3>
+                <h3>about us</h3>
+                <h3>cases</h3>
+            </div>
+            <h4>sign up</h4>
+        </div>
+        <div id="container">
+            <div id="left">
+                <h1>unlimited</h1>
+                <h1>pretendious</h1>
+                <h1><span>
+                        <img src="https://images.unsplash.com/photo-1700746672491-580a23cffe2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </span>
+                    <span>
+                        <img src="https://images.unsplash.com/photo-1700746672491-580a23cffe2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </span>
+                    <span>
+                        <img src="https://images.unsplash.com/photo-1700746672491-580a23cffe2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </span>
+                    ideas
+                </h1>
+            </div>
+            <div id="right">
+                <img src="https://images.unsplash.com/photo-1700746672491-580a23cffe2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <div id="page2">
+        <div class="box">
+            <h1>creative studio</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In minus itaque dignissimos autem repudiandae
+                rerum, a cumque debitis suscipit expedita!</p>
+        </div>
+        <div class="box">
+            <h1>creative studio</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In minus itaque dignissimos autem repudiandae
+                rerum, a cumque debitis suscipit expedita!</p>
+        </div>
+        <div class="box">
+            <h1>creative studio</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In minus itaque dignissimos autem repudiandae
+                rerum, a cumque debitis suscipit expedita!</p>
+        </div>
+    </div>
+    <script src="/god/gsap.js"></script>
+    <script src="/god/ScrollTrigger.min.js"></script>
+    <script>
+        var tl = gsap.timeline();
+
+tl.from('#nav',{
+    y:-50,
+    opacity:0,
+    delay:0.8
+})
+tl.from('#nav h1,#nav h4 ,#nav h3',{
+    y:-80,
+    opacity:0,
+    duration:0.4,
+    stagger:0.3,   
+})
+tl.from('#container #left h1',{
+    x:-100,
+    duration:0.3,
+    opacity:0,
+    stagger:0.2
+})
+tl.from('#right',{
+    overflow:'hidden',
+    scale:3,
+    duration:0.5,
+    opacity:0,
+})
+gsap.from('#page2 .box',{
+    scale:0,
+    opacity:0,
+    stagger:0.3,
+    scrollTrigger:{
+        trigger:".box",
+        scroller:'body',
+        start:'top 70%',
+    }
+})
+    </script>
+
+</html>
